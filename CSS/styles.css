@@ -21,6 +21,14 @@
   color: var(--secondary-color);
 }
 
+.container {
+  width: 100%;
+}
+
+.section {
+  width: 100%;
+}
+
 .logo {
   font-family: "Raleway", sans-serif;
   color: var(--logo-web-color);
@@ -49,12 +57,6 @@ a:hover {
   transition: color var(--transition);
 }
 
-a.active {
-  border-bottom: 4px solid var(--logo-web-color);
-  border-radius: 2px;
-  padding-bottom: 25px;
-}
-
 h1 {
   font-size: 56px;
   font-weight: 700;
@@ -70,8 +72,8 @@ h2 {
 
 h3 {
   color: var(--primary-color);
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 36px;
+  font-weight: 700;
 }
 
 .hero-section {
@@ -112,6 +114,7 @@ a {
 }
 
 .footer-section {
+  width: 100%;
   background-color: var(--primary-color);
 }
 
@@ -208,6 +211,10 @@ header {
   margin-bottom: 0;
 }
 
+.what-are-we-doing-section {
+  display: none;
+}
+
 .our-team h2 {
   display: flex;
   justify-content: center;
@@ -248,28 +255,32 @@ header {
 
 .our-team {
   margin-bottom: 40px;
+  padding: 96px 0px;
 }
 
 .footer {
   display: flex;
-  justify-content: flex-start;
-  gap: 120px;
+  justify-content: center;
+  flex-direction: column;
+  gap: 72px;
 }
 
 .footer-logo {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
-  text-align: flex-start;
+  text-align: center;
+  margin-top: 96px;
 }
 
 .footer .logo {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .social-media-footer p {
   display: flex;
+  justify-content: center;
   font-weight: 500;
   margin: 0px 0px 20px 0px;
   color: var(--footer-text-color);
@@ -277,14 +288,15 @@ header {
 
 .footer-input {
   display: flex;
-  width: 200px;
-  display: flex;
+  width: 100%;
   height: 40px;
   background-color: var(--primary-color);
   border-radius: 4px;
   border: 1px solid var(--footer-text-color);
   margin-top: 15px;
   outline: none;
+  cursor: pointer;
+  margin-right: 15px;
 }
 
 .footer-input::placeholder {
@@ -295,9 +307,10 @@ header {
 
 .subscribe-container {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
   gap: 16px;
-  position: absolute;
+  margin-bottom: 96px;
 }
 
 .subscribe-container label {
@@ -306,11 +319,15 @@ header {
   color: var(--footer-text-color);
   padding-left: 15px;
   caret-color: var(--footer-text-color);
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .subscribe-btn {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-color: var(--logo-web-color);
   color: var(--footer-text-color);
@@ -321,6 +338,8 @@ header {
   height: 40px;
   outline: none;
   cursor: pointer;
+  padding-left: 20px;
+  margin-left: 25px;
 }
 
 .subscribe-btn:hover {
@@ -335,8 +354,8 @@ header {
   height: 20px;
   fill: var(--footer-text-color);
   position: relative;
-  right: 60px;
-  bottom: 10px;
+  right: -30px;
+  bottom: 45px;
 }
 
 .filters ul {
@@ -394,7 +413,7 @@ header {
 
 .social-media-icons {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
@@ -422,7 +441,6 @@ header {
 }
 
 .social-media-footer {
-  width: 200px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -433,6 +451,8 @@ header {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  width: 390px;
+  margin-top: 30px;
 }
 
 .icons-clients {
@@ -440,6 +460,9 @@ header {
   justify-content: space-between;
   margin-top: 70px;
   fill: var(--clients-icons-color);
+  flex-wrap: wrap;
+  row-gap: 72px;
+  margin-bottom: 96px;
 }
 
 .logo-clients .client {
@@ -462,6 +485,11 @@ header {
 .icons-clients svg {
   width: 100px;
   height: 50px;
+}
+
+.clients-section {
+  display: flex;
+  justify-content: center;
 }
 
 /* Modal */
@@ -617,7 +645,6 @@ label:focus-within svg {
   background-color: var(--cloud-color);
   z-index: 1;
   padding: 40px 31px;
-  height: 100%;
   width: 100%;
 }
 
@@ -625,6 +652,56 @@ label:focus-within svg {
   border: none;
   background: none;
   align-self: self-end;
+}
+
+.mobile-menu-nav-links {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 40px;
+}
+
+.mobile-menu-nav-links a:nth-child(3) {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--social-media-icons-bg-color);
+}
+
+.mobile-menu-nav-links a:nth-child(2) {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--secondary-color);
+}
+
+.mobile-menu-nav-bar ul li a {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.mobile-menu-nav-bar a.active:active {
+  color: var(--logo-web-color);
+  transition: color var(--transition);
+}
+
+.mobile-menu-nav-bar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 70px;
+}
+
+.mobile-menu-social-media {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+}
+
+.mobile-menu-social-media svg {
+  width: 40px;
+}
+
+.mobile-menu-social-media .icons:hover {
+  border-radius: 50%;
 }
 
 /* Media queries for screens wider than 768px */
@@ -643,19 +720,47 @@ label:focus-within svg {
 
   .nav-links {
     display: flex;
-    gap: 40px;
+    gap: 12px;
+    flex-direction: column;
   }
 
   .menu {
-    width: 1400px;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     padding: 25px 0px;
+  }
+
+  .js-menu-container.is-open {
+    display: none;
+  }
+
+  a.active {
+    border-bottom: 4px solid var(--logo-web-color);
+    border-radius: 2px;
+    padding-bottom: 25px;
+  }
+
+  .our-team ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 750px;
+    margin-left: 50px;
+  }
+
+  .logo-clients {
+    width: 550px;
   }
 }
 
 /* Media queries for screens wider than 1158px */
 @media screen and (min-width: 1158px) {
+  .nav-links {
+    flex-direction: row;
+    gap: 40px;
+  }
+
   .features ul {
     display: flex;
     justify-content: space-between;
@@ -688,8 +793,8 @@ label:focus-within svg {
     padding: 94px;
   }
 
-  .container {
-    width: 1200px;
+  .what-are-we-doing-section {
+    display: flex;
   }
 
   .what-are-we-doing h2 {
@@ -709,5 +814,81 @@ label:focus-within svg {
 
   .our-team ul {
     flex-direction: row;
+    width: 100%;
+    margin-top: 72px;
+    padding: 96px 0px;
+    margin-left: 0px;
+  }
+
+  .our-team {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .footer {
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 120px;
+  }
+
+  .footer-logo {
+    justify-content: flex-start;
+    text-align: flex-start;
+    margin-top: 0px;
+  }
+
+  .footer .logo {
+    justify-content: flex-start;
+  }
+
+  .social-media-footer p {
+    justify-content: flex-start;
+  }
+
+  .footer-section p {
+    text-align: start;
+  }
+
+  .footer-input {
+    margin-right: 0px;
+  }
+
+  .social-media-icons {
+    justify-content: space-around;
+  }
+
+  .subscribe-container {
+    flex-direction: row;
+    align-items: flex-end;
+    position: absolute;
+  }
+
+  .subscribe-container label {
+    justify-content: flex-start;
+  }
+
+  .subscribe-btn {
+    padding-left: 10px;
+    width: 180px;
+    margin-left: 0px;
+  }
+
+  .subscribe-container svg {
+    right: 50px;
+    bottom: 10px;
+  }
+
+  .logo-clients {
+    width: 100%;
+  }
+
+  .icons-clients {
+    flex-wrap: nowrap;
+  }
+
+  h3 {
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 500;
   }
 }
