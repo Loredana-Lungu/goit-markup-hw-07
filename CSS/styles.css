@@ -354,7 +354,7 @@ header {
   height: 20px;
   fill: var(--footer-text-color);
   position: relative;
-  right: -30px;
+  right: -40px;
   bottom: 45px;
 }
 
@@ -672,13 +672,18 @@ label:focus-within svg {
   color: var(--secondary-color);
 }
 
+.mobile-menu-nav-links a:hover {
+  color: var(--logo-web-color);
+  transition: color var(--transition);
+}
+
 .mobile-menu-nav-bar ul li a {
   font-size: 36px;
   font-weight: 700;
   color: var(--primary-color);
 }
 
-.mobile-menu-nav-bar a.active:active {
+.mobile-menu-nav-bar ul li a:hover {
   color: var(--logo-web-color);
   transition: color var(--transition);
 }
@@ -698,6 +703,8 @@ label:focus-within svg {
 
 .mobile-menu-social-media svg {
   width: 40px;
+  height: 40px;
+  margin: 18px;
 }
 
 .mobile-menu-social-media .icons:hover {
@@ -728,7 +735,8 @@ label:focus-within svg {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    padding: 25px 0px;
+    padding: 16px;
+    align-items: center;
   }
 
   .js-menu-container.is-open {
@@ -738,7 +746,7 @@ label:focus-within svg {
   a.active {
     border-bottom: 4px solid var(--logo-web-color);
     border-radius: 2px;
-    padding-bottom: 25px;
+    padding-bottom: 35px;
   }
 
   .our-team ul {
@@ -749,13 +757,42 @@ label:focus-within svg {
     margin-left: 50px;
   }
 
+  .our-team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .logo-clients {
     width: 550px;
+  }
+
+  .features ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .advantages {
+    width: 356px;
+    align-items: flex-start;
+  }
+
+  .container.features {
+    width: 1000px;
   }
 }
 
 /* Media queries for screens wider than 1158px */
 @media screen and (min-width: 1158px) {
+  .menu {
+    padding: 25px 0px;
+  }
+
+  a.active {
+    padding-bottom: 25px;
+  }
   .nav-links {
     flex-direction: row;
     gap: 40px;
@@ -767,6 +804,11 @@ label:focus-within svg {
     margin: 0px;
     padding: 0px;
     gap: 24px;
+    flex-wrap: nowrap;
+  }
+
+  .container.features {
+    width: 100%;
   }
 
   .icons-features {
@@ -787,6 +829,10 @@ label:focus-within svg {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .advantages {
+    width: auto;
   }
 
   .section {
@@ -814,7 +860,7 @@ label:focus-within svg {
 
   .our-team ul {
     flex-direction: row;
-    width: 100%;
+    width: 1200px;
     margin-top: 72px;
     padding: 96px 0px;
     margin-left: 0px;
