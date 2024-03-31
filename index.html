@@ -22,7 +22,7 @@
 
 <body>
 
-    <div class="js-menu-container is-open">
+    <div class="js-menu-container">
         <button class="menu-toggle js-close-menu">
             <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                 <path fill-rule="evenodd"
@@ -93,6 +93,13 @@
     <main>
         <!-- 'Hero' section -->
         <section class="section hero-section">
+
+        <!-- Background image -->
+        <img src="./images/hero-section-img.png" 
+            srcset="./images/hero-section-m.png 428w, ./images/hero-section-m-x2.png 428w, ./images/hero-section-t.png 768w, ./images/hero-section-t-x2.png 728w, ./images/hero-section-d.png 1440px, ./images/hero-section-d-x2.png 1440px" 
+            sizes="(max-width: 728px) 428w, (max-width: 1157px) 728w, (min-width: 1158px) 1440px"
+            alt="people-office">
+
             <div class="container hero-container">
             <div class="hero-text">
                   <h1>Effective Solutions<br>for Your Business</h1>
@@ -458,7 +465,7 @@
                 <div class="subscribe-container">
                 <label for="email">
                     Subscribe
-                    <input type="email" id="email" name="email" autofocus placeholder="Email"
+                    <input type="email" id="email" name="email" placeholder="Email"
                     class="footer-input"/>
                 </label>
 
