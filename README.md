@@ -1,7 +1,7 @@
-# goit-markup-hw-06
+# goit-markup-hw-07
 
 Realizare HTML WebStudio
 
 ## Link catre pagina Live
 
-[WebStudio Homework6](https://github.com/Loredana-Lungu/goit-markup-hw-06.git)
+[WebStudio Homework7](https://github.com/Loredana-Lungu/goit-markup-hw-07.git)
